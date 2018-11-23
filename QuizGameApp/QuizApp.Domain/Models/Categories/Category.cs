@@ -1,0 +1,9 @@
+﻿namespace QuizApp.Domain.Models.Categories
+{
+    public class Category
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+    }
+}

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-QuizApp-65943D54-FB8C-47D2-86A7-961DA31100D9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuizApp.Constants\QuizApp.Constants.csproj" />
+    <ProjectReference Include="..\QuizApp.Contracts\QuizApp.Contracts.csproj" />
+    <ProjectReference Include="..\QuizApp.Domain\QuizApp.Domain.csproj" />
+    <ProjectReference Include="..\QuizApp.Infrastructure\QuizApp.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
