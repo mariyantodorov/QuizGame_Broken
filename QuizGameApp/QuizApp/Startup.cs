@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using QuizApp.Infrastructure.Data;
+using QuizApp.Infrastructure;
 
 namespace QuizApp
 {
@@ -29,12 +29,12 @@ namespace QuizApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<QuizAppDbContext>(options =>
+            services.AddDbContext<QuizAppContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<QuizAppDbContext>();
+                .AddEntityFrameworkStores<QuizAppContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

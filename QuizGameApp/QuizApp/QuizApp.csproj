@@ -18,4 +18,9 @@
     <ProjectReference Include="..\QuizApp.Infrastructure\QuizApp.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Data\" />
+    <Folder Include="Areas\Identity\Services\" />
+  </ItemGroup>
+
 </Project>
